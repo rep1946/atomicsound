@@ -1,36 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Welcome to Atomic Sound NYC!</title>
-	<meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <link rel="stylesheet" href="https://use.typekit.net/hsi3cbe.css">
-	  <link rel="stylesheet" type="text/css" href="./styles/mainstyle.css">
-	  <link rel="stylesheet" type="text/css" href="./styles/reset.css">
+	<meta charset="UTF-8">
+	<title>Welcome to Atomic Sound, A World Class Recording Studio in NYC!</title>
+	<link rel="stylesheet" type="text/css" href="./styles/reset.css">
+	<link rel="stylesheet" type="text/css" href="./styles/mystyles.css">
+	<link rel="stylesheet" href="https://use.typekit.net/hsi3cbe.css">
 
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+	crossorigin="anonymous"></script>
 </head>
-
-<body>
-	<container>
+	<body>
 		<header>
-			<div id = "AS_logo"> </div>
-			<nav>
-				<ul>
-					<li>Book a session</li>
-					<li>Explore the studio</li>
-					<li>Recording equipment</li>
-					<li>Contact</li>
-					<li>Shop</li>
-				</ul>
-			</nav>
-
+				<div id= "navLogo">
+					<img src="./images/AtomicSound_logo.svg" alt ="Atomic Sound Logo" >
+				</div>
+			<div class="container mobile_dropdown">
+			
+				<nav>
+					<ul id ="menuItems">
+						<li class= "navLabel"><a href="#">Book a session</a></li>
+						<li class= "navLabel"><a href="#">About the studio</a></li>
+						<li class= "navLabel"><a href="#">Recording equipment</a></li>
+						<li class= "navLabel"><a href="#">Shop</a></li>
+						<li class= "navLabel"><a href="#">Contact us</a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
 
 
-	</container>
+
+		<main id= "studioPan">
+			<div class = "darkGreyOverlay">
+				<div class="container">
+				<!--Testing headlines	<h1>This is a H1 Headline</br>
+					..on 2lines</h1>
+					<h2>This a H2 headline</h2>
+					<h3>This a H3 headline</h3> -->
+	 
+					<div id = "mainCTA">
+						<section class= "scrollSpace">
+							<img src="./images/Mouse_icon_cream.svg" alt ="mouse icon" >
+							<h4> Move the mouse to explore the space</h4>
+						</section>
+
+						<section class="enterSite">
+							<button class= "enterBttn shamrock"><p>Enter</p></button>
+						</section>
+					</div>
+				</div>
+			</div>
+		</main>	
+
+		<footer>
+			<div class="container">
+				<p class= "copywrite">Atomic Sound LLC </br>
+				All rights reserved 2018</p>
+				</p>
+
+				<ul class="socialIcons">
+					<li><a href="#"><img src="./images/facebook_icon.svg"></a></li>
+					<li><a href="#"><img src="./images/Instagram_icon.svg"></a></li>
+					<li><a href="#"><img src="./images/LinkedIn_icon.svg"></a></li>
+				</ul>
+			</div>
+		</footer>
+
+
+	<!--addded JS file-->
+
+		<script src="./scripts/atomic_scripts.js"></script>
+		
+
+	</body>
 
 
 
 
-</body>
 </html>
