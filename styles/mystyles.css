@@ -181,7 +181,7 @@ main {
 .darkGreyOverlay {
 	display: flex;
 	flex-direction: column;
-	background-color: rgba(45, 44, 45, .8);
+	background-color: rgba(45, 44, 45, .87);
 	width: 100%;
 	
 }
