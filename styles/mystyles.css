@@ -2,7 +2,7 @@
 /* Global type styles */
 
 body {
-	font-size: 16px;
+	font-size: 14px;
 	background-color: rgb(247, 247, 237);
 	display: flex;
 	min-height:100vh;
@@ -32,11 +32,20 @@ h1, h2, h3, ul li.navLabel a {
 }
 
 
+label, input {
+	font-size: 14px;
+	font-family: "usual",sans-serif;
+	font-style: normal;
+
+}
+
+
 /*------Global Mobile font sizes---------*/
 h1 {
 
 	font-size: 42px;
 	line-height: 44px;
+	margin: 0px 0px 70px 0px;
 }
 
 
@@ -44,11 +53,13 @@ h1 {
 h2 {
 	font-size: 34px;
 	line-height: 36px;
+	margin: 0px 0px 50px 0px;
 }
 
 h3 {
 	font-size: 20px;
 	line-height: 22px;
+	margin: 0px 0px 20px 0px;
 }
 
 h4 {
@@ -95,6 +106,32 @@ button p {
 
 
 
+.darkGreyOverlay {
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(45, 44, 45, .87);
+	width: 100%;
+	
+}
+
+
+.whiteOverlay {
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(255, 255, 255, .87);
+	width: 100%;
+}
+
+.headline_rule{
+	border-bottom: 1px solid rgb(209, 209, 200);
+}
+
+
+input {
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid rgb(209, 209, 200);
+	}
 
 
 /*---Branding-----*/
@@ -178,13 +215,7 @@ main {
 	
 }
 
-.darkGreyOverlay {
-	display: flex;
-	flex-direction: column;
-	background-color: rgba(45, 44, 45, .87);
-	width: 100%;
-	
-}
+
 
 #mainCTA {
 	    justify-content: center;
@@ -263,6 +294,50 @@ footer p {
 
 }
 
+/*Book a session*/
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+	label {
+		margin-bottom: 20px;
+	}
+
+	#name, #start_date, #end_date{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	
+	fieldset, #payPalButton {
+		display: flex;
+		flex-direction: column;
+		margin: 10px 0px 20px 0px;
+	}
+
+	#nameField, #startdate_field, #enddate_field{
+		width: 100%;
+	}
+
+	#reserve {
+		display: flex;
+		margin: 0px;
+
+	}
+
+
+	#payPalButton {
+	border-radius: 20px;
+	padding: 10px 50px;
+	border: none;
+	color: white;
+	background-color: #0070ba;
+	margin: 50px auto;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 1px;
+
+	}
 
 
 
@@ -309,18 +384,67 @@ footer p {
 		padding: 0px 20px;
 	}
 
-	ul li.navLabel a {
-		font-size: 17px;
+	.sec_headline {
+		border-bottom: 1px solid rgb(226, 226, 220)
+
 	}
 
+/*Reservation form*/
+	form {
+		display: flex;
+		flex-direction: row;
+	}
+
+	label {
+		margin-bottom: 20px;
+	}
+
+	
+	fieldset {
+		display: flex;
+		flex-direction: column;
+		margin: 10px 50px 20px 0px;
+	}
+
+	#nameField{
+		width: 400px;
+	}
+
+	#startdate_field, #enddate_field {
+		display: flex;
+		flex-direction: row;
+	}
+
+
+
+	#fullName, #startDate, #endDate {
+
+		flex-direction: row;
+		margin: 0px 50px 20px 0px;
+
+	}
+
+
+	#reserve {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+
+
+
+
 		/*------Global Desktop font sizes---------*/
+	body {
+		font-size: 16px;
+	}
+
 	h1 {
 
 		font-size: 54px;
 		line-height: 56px;
 	}
-
-
 
 	h2 {
 		font-size: 42px;
@@ -334,9 +458,20 @@ footer p {
 		font-size: 16px;
 	}
 
-	main {
+	#studioPan {
 		flex-grow: 5;
 	}
+
+
+	ul li.navLabel a {
+		font-size: 17px;
+	}
+
+	label, input {
+	font-size: 16px;
+
+	}
+
 
 
 

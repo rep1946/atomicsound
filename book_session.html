@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Welcome to Atomic Sound, A World Class Recording Studio in NYC!</title>
+	<title>Book a session</title>
 	<link rel="stylesheet" type="text/css" href="./styles/reset.css">
 	<link rel="stylesheet" type="text/css" href="./styles/mystyles.css">
 	<link rel="stylesheet" href="https://use.typekit.net/hsi3cbe.css">
@@ -10,15 +10,6 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 	integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
 	crossorigin="anonymous"></script>
-
-	<!-- Adding Panoramic/3JS script -->
-	<!-- <script src="js/three.min.js"></script>
-	<script src="js/panolens.min.js"></script> -->
-
-	<!-- A-Frame -->
-	<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-
-
 </head>
 	<body>
 		<header>
@@ -39,34 +30,42 @@
 			</div>
 		</header>
 
-	<!-- 	<script>
 
-				var panorama, viewer;
 
-				panorama = new PANOLENS.ImagePanorama("../images/Controlroom_hero.jpg" );
-
-				viewer = new PANOLENS.Viewer();
-				viewer.add( panorama );
-		</script> -->
-		<main id= "studioPan">
-		
-			<div class = "darkGreyOverlay">
+		<main id= "reservation_form">
+			<div class = "whiteOverlay">
 				<div class="container">
-				<!--Testing headlines	<h1>This is a H1 Headline</br>
-					..on 2lines</h1>
-					<h2>This a H2 headline</h2>
-					<h3>This a H3 headline</h3> -->
-	 
-					<div id = "mainCTA">
-						<section class= "scrollSpace">
-							<img src="./images/Mouse_icon_cream.svg" alt ="mouse icon" >
-							<h4> Move the mouse to explore the space</h4>
+					<h1 class="sec_headline">Book a session</h1>
+						<section>
+							<h3>Select services are you interested in</h3>
+							<p><strong>Don't worry, you can add or delete services at anytime.</strong></p>
+							<article class= "services"><img src="" class="mixing"></article>
+							<article class= "services"><img src="" class="mastering"></article>
+							<article class= "services"><img src="" class="recording"></article>
 						</section>
 
-						<section class="enterSite">
-							<button class= "enterBttn shamrock"><p>Enter</p></button>
-						</section>
-					</div>
+						<section id ="resContact" class= "hidden">
+							<form>
+								<fieldset id="name">
+									<label for="fullname" id="fullName">Enter your name</label>
+									<input type="text" name="fullname" id="nameField" placeholder="Jimi Hendrix">
+								</fieldset>
+
+								<fieldset id ="start_date">
+									<label for="startdate" id="startDate_label">Choose a start date</label>
+									<input type="month" name="startdate_field" id="startdate_field">
+								</fieldset>
+
+								<fieldset id="end_date" >
+									<label for="enddate" id="endDate_label">Choose end date</label>
+									<input type="month" name="enddate_field" id="enddate_field">
+								</fieldset>
+									<!-- Add Payal Integrartion here -->
+								<fieldset id="reserve"</fieldset>	
+									<input type="submit" name="reserve" id="payPalButton" value="Book a session">
+								
+							</form>
+
 				</div>
 			</div>
 		</main>	
