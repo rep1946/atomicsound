@@ -13,9 +13,19 @@
 </head>
 	<body>
 		<header>
-				<div id= "navLogo">
+			
+			<div id= "navLogo">
 					<a href="./index.html"><img src="./images/AtomicSound_logo.svg" alt ="Atomic Sound Logo"></a> 
-				</div>
+					<div id="hamburgerMenu">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>	
+			</div>
+
+
+
+
 			<div class="container mobile_dropdown">
 			
 				<nav>
@@ -39,9 +49,11 @@
 						<section>
 							<h3>Select services are you interested in</h3>
 							<p><strong>Don't worry, you can add or delete services at anytime.</strong></p>
-							<article class= "services"><img src="" class="mixing"></article>
-							<article class= "services"><img src="" class="mastering"></article>
-							<article class= "services"><img src="" class="recording"></article>
+							<div id="services">
+								<article class= "mixing"><img src="./images/atomisound_icons_soundboard_static.svg" class="mixing"><h4>Mixing</h4></article>
+								<article class= "mastering"><img src="./images/atomisound_icons_soundwave_static.svg" class="mastering"><h4>Mastering</h4></article>
+								<article class= "recording"><img src="./images/atomisound_icons_microphone_static.svg" class="recording"><h4>Recording</h4></article>
+							</div>
 						</section>
 
 						<section id ="resContact" class= "hidden">
@@ -61,10 +73,14 @@
 									<input type="month" name="enddate_field" id="enddate_field">
 								</fieldset>
 									<!-- Add Payal Integrartion here -->
-								<fieldset id="reserve"</fieldset>	
-									<input type="submit" name="reserve" id="payPalButton" value="Book a session">
-								
+
+
 							</form>
+
+								<div id="bookIt">
+										<input type="submit" name="reserve" id="payPalButton" value="Book a session">
+								</div>
+
 
 				</div>
 			</div>

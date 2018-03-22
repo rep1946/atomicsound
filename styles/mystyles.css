@@ -96,9 +96,9 @@ button p {
 }
 
 
-/*----|||||||||||||||||||~~~~~~~~~
-	  |||||||||||||||||||~~~~~~~~~
-	  Global Page elements-----*/
+/*------------------Global Page elements----------------
+********************************************************
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 .container {
 	margin: 50px;
@@ -134,11 +134,27 @@ input {
 	}
 
 
+
+
+
+/*--------------Global Nav--------------
+****************************************
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+header {
+	
+	display: flex;
+	flex-direction: column;
+	align-items: 
+	justify-content: space-between;
+	order: 0;
+}
+
 /*---Branding-----*/
 #navLogo {
 	order: 0;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: space-between;
 	display: flex;
 	background-color: rgba(45, 45, 44, .95);
 
@@ -147,8 +163,8 @@ input {
 
 #navLogo img {
 	box-sizing: border-box;	
-	padding: 20px;
-	width: 100px;
+	padding: 10px 20px;
+	width: 58%;
 
 }
 .mobile_dropdown {
@@ -156,8 +172,34 @@ input {
 		padding: 20px 80px;
 		margin: 0px;
 		box-sizing: border-box;
+
 }
-/*----Global Nav-----*/
+
+
+
+
+/*-----Hamburger Menu---------*/
+#hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+    z-index: 999;
+}
+
+
+.bar1, .bar2, .bar3 {
+	width: 35px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #F1E4B2;
+    margin: 6px 20px 0 0;
+    transition: 0.4s;
+}
 
 
 ul li.navLabel a {
@@ -180,19 +222,15 @@ li.navLabel {
 	letter-spacing: .5px;
 	text-transform: uppercase;
 	margin: 20px 0px;
-
-
-
 }
 
-header {
-	
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	order: 0;
 
-}
+
+
+/*--------------Home page elements--------------
+************************************************
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
 
 
 main {
@@ -294,7 +332,65 @@ footer p {
 
 }
 
-/*Book a session*/
+/*---------------Book a session Page-----------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>
+----------------------------------------------------*/
+
+
+/*Select Service*/
+
+#services {
+	display: flex;
+	flex-direction: column;
+	margin: 25px 0px 50px 0px;
+}
+
+
+.mixing, .mastering, .recording{
+	display: flex;
+	flex-direction: column;
+	padding: 10px 25px;
+}
+
+
+.mixing img{
+	width: 60%;
+	margin: auto;
+	justify-content: center;
+}
+
+
+.mixing h4 {
+	text-align: center;
+}
+
+
+
+
+.mastering img {
+	width: 60%;
+	margin: auto;
+	justify-content: center;
+}
+
+.mastering h4 {
+	text-align: center;
+}
+
+.recording img {
+	width: 60%;
+	margin: auto;
+	justify-content: center;
+}
+
+.recording h4{
+	text-align: center;
+}
+
+
+
+
+
 	form {
 		display: flex;
 		flex-direction: column;
@@ -306,7 +402,6 @@ footer p {
 	#name, #start_date, #end_date{
 		display: flex;
 		flex-direction: column;
-		flex-wrap: nowrap;
 	}
 	
 	fieldset, #payPalButton {
@@ -317,6 +412,7 @@ footer p {
 
 	#nameField, #startdate_field, #enddate_field{
 		width: 100%;
+		height: 30px;
 	}
 
 	#reserve {
@@ -343,27 +439,30 @@ footer p {
 
 
 
-/*-------DESKTOP-------*/
+/*--------------------DESKTOP------------------
+***********************************************
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+--------------------------------------------*/
 
-@media screen and (min-width: 1025px) {
-  header {
-  	display: flex;
-  	flex-direction: row;
-  	justify-content: space-between;
-  	background-color: rgba(45, 45, 44, .95);
-  }
-
-	 #menuItems {
-	    display: flex;
-	    align-content: center;
-	    flex-direction: row;
-	    background-color: transparent;
+	@media screen and (min-width: 1025px) {
+	  header {
+	  	display: flex;
+	  	flex-direction: row;
+	  	justify-content: space-between;
+	  	background-color: rgba(45, 45, 44, .95);
 	  }
 
-	  main {
-	    flex-direction: row;
 
+/*--------------Nav-------------*/
+	  header {
+	  	height: 100px;
 	  }
+
+
+	  #hamburgerMenu {
+	  	display: none;
+	  }
+
 
 	  #navLogo {
 	  	flex-basis: 120px;
@@ -375,14 +474,33 @@ footer p {
 	}
 
 	.mobile_dropdown {
-			margin: 40px 0px;
 			background-color: transparent;
+			margin: 0px;
 		}
+
+	nav {
+
+	}
 
 	.navLabel {
 		justify-content: space-between;
 		padding: 0px 20px;
 	}
+
+
+	 #menuItems {
+	    display: flex;
+	    align-content: center;
+	    align-items: center;
+	    flex-direction: row;
+	    background-color: transparent;
+	  }
+
+
+	  main {
+	    flex-direction: row;
+
+	  }
 
 	.sec_headline {
 		border-bottom: 1px solid rgb(226, 226, 220)
@@ -393,6 +511,8 @@ footer p {
 	form {
 		display: flex;
 		flex-direction: row;
+		justify-content: flex-start;
+
 	}
 
 	label {
@@ -400,39 +520,25 @@ footer p {
 	}
 
 	
-	fieldset {
-		display: flex;
-		flex-direction: column;
-		margin: 10px 50px 20px 0px;
-	}
+	
 
 	#nameField{
 		width: 400px;
 	}
 
-	#startdate_field, #enddate_field {
-		display: flex;
-		flex-direction: row;
-	}
 
-
-
-	#fullName, #startDate, #endDate {
-
-		flex-direction: row;
-		margin: 0px 50px 20px 0px;
-
-	}
-
-
-	#reserve {
+	#name, #start_date {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		margin-right: 40px;
 	}
 
 
-
+	#end_date {
+		display: flex;
+		flex-direction: column;
+		margin-left: 40px;
+	}
 
 
 		/*------Global Desktop font sizes---------*/
@@ -472,7 +578,62 @@ footer p {
 
 	}
 
+/*---------------Book a session Page-----------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>
+----------------------------------------------------*/
 
+
+/*Select Service*/
+
+	#services {
+		display: flex;
+		margin: 40px 0px 80px 0px;
+		flex-direction: row;
+		justify-content: center;
+		background-color: rgba(247, 247, 237, .4)
+	}
+
+
+	.mixing, .mastering, .recording{
+		display: flex;
+		flex-direction: column;
+		padding: 25px 50px;
+	}
+
+
+	.mixing img{
+		width: 50%;
+		margin: 0px;
+		justify-content: center;
+	}
+
+
+	.mixing h4 {
+		text-align: center;
+	}
+
+
+
+
+	.mastering img {
+		width: 50%;
+		margin: 0px;
+		justify-content: center;
+	}
+
+	.mastering h4 {
+		text-align: center;
+	}
+
+	.recording img {
+		width: 50%;
+		margin: 0px;
+		justify-content: center;
+	}
+
+	.recording h4{
+		text-align: center;
+	}
 
 
 }
