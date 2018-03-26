@@ -350,10 +350,15 @@ footer p {
 	display: flex;
 	flex-direction: column;
 	padding: 10px 25px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 
-.mixing img{
+.soundboard{
 	width: 60%;
 	margin: auto;
 	justify-content: center;
@@ -367,7 +372,7 @@ footer p {
 
 
 
-.mastering img {
+.soundwave {
 	width: 60%;
 	margin: auto;
 	justify-content: center;
@@ -377,7 +382,7 @@ footer p {
 	text-align: center;
 }
 
-.recording img {
+.microphone {
 	width: 60%;
 	margin: auto;
 	justify-content: center;
@@ -387,9 +392,15 @@ footer p {
 	text-align: center;
 }
 
+.soundboard_active {
+	display: none;
+}
 
 
-
+.submitBttn {
+	margin: 50px auto;
+	
+}
 
 	form {
 		display: flex;
@@ -419,6 +430,10 @@ footer p {
 		display: flex;
 		margin: 0px;
 
+	}
+
+	#resContact {
+		display: none;
 	}
 
 
@@ -598,11 +613,16 @@ footer p {
 		display: flex;
 		flex-direction: column;
 		padding: 25px 50px;
+		cursor: pointer;
+	    -webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 	}
 
 
-	.mixing img{
-		width: 50%;
+	.soundboard{
+		width: 65%;
 		margin: 0px;
 		justify-content: center;
 	}
@@ -615,8 +635,8 @@ footer p {
 
 
 
-	.mastering img {
-		width: 50%;
+	.soundwave {
+		width: 65%;
 		margin: 0px;
 		justify-content: center;
 	}
@@ -625,8 +645,8 @@ footer p {
 		text-align: center;
 	}
 
-	.recording img {
-		width: 50%;
+	.microphone {
+		width: 65%;
 		margin: 0px;
 		justify-content: center;
 	}
