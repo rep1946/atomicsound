@@ -223,7 +223,9 @@ li.navLabel {
 	text-transform: uppercase;
 	margin: 20px 0px;
 }
-
+.mobile_dropdown {
+	display: none;
+}
 
 
 
@@ -348,6 +350,7 @@ footer p {
 
 .mixing, .mastering, .recording{
 	display: flex;
+	justify-content: center;
 	flex-direction: column;
 	padding: 10px 25px;
 	cursor: pointer;
@@ -358,38 +361,47 @@ footer p {
 }
 
 
-.soundboard{
-	width: 60%;
-	margin: auto;
-	justify-content: center;
-}
+
 
 
 .mixing h4 {
 	text-align: center;
+	padding: 5px;
 }
 
 
 
 
-.soundwave {
-	width: 60%;
-	margin: auto;
+.soundboard {
+	width: 120px;
 	justify-content: center;
+	padding: 10px;
+	margin: auto;
 }
 
 .mastering h4 {
 	text-align: center;
+	padding: 5px;
 }
 
-.microphone {
-	width: 60%;
-	margin: auto;
+.soundwave {
+	width: 120px;
 	justify-content: center;
+	padding: 10px;
+	margin: auto;
 }
 
 .recording h4{
+	padding: 5px;
 	text-align: center;
+}
+
+
+.microphone {
+	width: 120px;
+	justify-content: center;
+	padding: 10px;
+	margin: auto;
 }
 
 .soundboard_active {
@@ -451,8 +463,13 @@ footer p {
 	}
 
 
+/*
+--------------------iPad------------------
+***********************************************
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+--------------------------------------------
 
-
+	@media screen and (min-width: 1025px)*/
 
 /*--------------------DESKTOP------------------
 ***********************************************
@@ -491,6 +508,8 @@ footer p {
 	.mobile_dropdown {
 			background-color: transparent;
 			margin: 0px;
+			display: flex;
+			justify-content: flex-end;
 		}
 
 	nav {
@@ -622,37 +641,40 @@ footer p {
 
 
 	.soundboard{
-		width: 65%;
-		margin: 0px;
+		width: 150px;
 		justify-content: center;
+		padding: 20px;
 	}
 
 
 	.mixing h4 {
 		text-align: center;
+		padding: 10px;
 	}
 
 
 
 
 	.soundwave {
-		width: 65%;
-		margin: 0px;
+		width: 150px;
 		justify-content: center;
+		padding: 20px;
 	}
 
 	.mastering h4 {
 		text-align: center;
+		padding: 10px;
 	}
 
 	.microphone {
-		width: 65%;
-		margin: 0px;
+		width: 150px;
 		justify-content: center;
+		padding: 20px;
 	}
 
 	.recording h4{
 		text-align: center;
+		padding: 10px;
 	}
 
 
