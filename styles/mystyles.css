@@ -2,12 +2,18 @@
 /* Global type styles */
 
 body {
-	font-size: 14px;
 	background-color: rgb(247, 247, 237);
 	display: flex;
 	min-height:100vh;
 	flex-direction: column;
 }
+
+
+section {
+	margin-top: 50px;
+}
+
+
 
 h4, p, li a{
 	font-family: "usual",sans-serif;
@@ -28,7 +34,6 @@ p {
 h1, h2, h3, ul li.navLabel a {
 	font-family: "vinyl",sans-serif;
 	font-style: normal;
-	font-weight: 400;
 }
 
 
@@ -40,25 +45,63 @@ label, input {
 }
 
 
+legend {
+	font-family: "usual",sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.documentLink {
+	font-family: "usual",sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	margin: 20px 0px;
+	color: rgba(97, 188, 204, 1);
+
+}
+
+fieldset {
+	padding: 0px;
+	width: auto;
+	margin: 0px 10px;
+}
+
+.documentLink a {
+	color: #66A182;
+	text-decoration: none;
+}
+
+.documentLink a:hover {
+	color: rgb(70, 105, 119)
+}
+
+.documentLink a:visited {
+	color: rgb(62, 110, 130)
+}
+
 /*------Global Mobile font sizes---------*/
 h1 {
 
 	font-size: 42px;
-	line-height: 44px;
-	margin: 0px 0px 70px 0px;
+	line-height: 52px;
+	margin: 0px 0px 60px 0px;
 }
 
-
+h1 .sec_headline {
+		font-size: 42px;
+	line-height: 52px;
+	margin: 0px 0px 60px 0px;
+}
 
 h2 {
 	font-size: 34px;
-	line-height: 36px;
+	line-height: 44px;
 	margin: 0px 0px 50px 0px;
 }
 
 h3 {
 	font-size: 20px;
-	line-height: 22px;
+	line-height: 30px;
 	margin: 0px 0px 20px 0px;
 }
 
@@ -69,25 +112,36 @@ h4 {
 
 
 p {
-	font-size: 14px;
-	line-height: 16px;
+	font-size: 12px;
+	line-height: 20px;
 }
 /*------Gloabl Button Style------*/
 
 button {
-	border-radius: 20px;
+	border-radius: 25px;
 	padding: 10px 50px;
 	display: flex;
 	justify-content: center;
 	border: none;
-	color: #F1E4B2;
 	margin: 50px;
 }
 
 button p {
 	font-size: 16px;
 	font-weight: 700;
+	letter-spacing: 1px;
 }
+
+button a {
+	text-decoration: none;
+
+}
+
+
+
+
+
+
 
 /*--------CSS Mixins--------*/
 
@@ -95,6 +149,24 @@ button p {
 	background-color: #66A182;
 }
 
+.shamrock:hover {
+	background-color: rgb(62, 110, 130);
+}
+
+
+.cremecopy {
+	color: rgba(241, 228, 178, 1);
+}
+
+.creme {
+	background-color: rgba(241, 228, 178, 1);
+}
+
+
+.blue {
+	background-color: rgba(62, 110, 130);
+
+}
 
 /*------------------Global Page elements----------------
 ********************************************************
@@ -104,7 +176,11 @@ button p {
 	margin: 50px;
 }
 
+.formwrapper {
+	padding: 5% 2.5% 2.5% 2.5%;
+	margin: 100px 0px 0px 0px;
 
+}
 
 .darkGreyOverlay {
 	display: flex;
@@ -127,14 +203,19 @@ button p {
 }
 
 
-input {
-		padding: 10px;
-		border-radius: 5px;
+input, textarea {
+		padding: 20px;
+		border-radius: 3px;
 		border: 1px solid rgb(209, 209, 200);
+		box-sizing: border-box;
+		height: 30px;
 	}
 
 
-
+.documentLink {
+	display: flex;
+	flex-direction: column;
+}
 
 
 /*--------------Global Nav--------------
@@ -247,24 +328,27 @@ main {
 
 #studioPan {
 	background-color: rgba(45, 44, 45, .8);
-	background-image: url("../images/Controlroom_hero.jpg");
-	background-repeat: none;
-	background-size: cover;
-	width: 100%;
-	background-position: center;
-	
+	/*background-image: url("../images/Controlroom_hero.jpg");*/
+	/*background-repeat: none;
+*/	/*background-size: cover;*/
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	/*background-position: center;
+*/	
 }
 
 
 
 #mainCTA {
-	    justify-content: center;
+	justify-content: center;
     align-items: center;
-    align-self: stretch;
+    /* align-self: stretch; */
     flex-direction: column;
-    height: 900px;
     /* flex-basis: 1080px; */
     display: flex;
+    z-index: 99999;
+    position: absolute;
 }
 
 
@@ -341,83 +425,85 @@ footer p {
 
 /*Select Service*/
 
-#services {
-	display: flex;
-	flex-direction: column;
-	margin: 25px 0px 50px 0px;
-}
+	#services {
+		display: flex;
+		flex-direction: column;
+		margin: 25px 0px 50px 0px;
+	}
 
 
-.mixing, .mastering, .recording{
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	padding: 10px 25px;
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-
-
-
-
-
-.mixing h4 {
-	text-align: center;
-	padding: 5px;
-}
+	.mixing, .mastering, .recording{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
 
 
 
 
-.soundboard {
-	width: 120px;
-	justify-content: center;
-	padding: 10px;
-	margin: auto;
-}
 
-.mastering h4 {
-	text-align: center;
-	padding: 5px;
-}
-
-.soundwave {
-	width: 120px;
-	justify-content: center;
-	padding: 10px;
-	margin: auto;
-}
-
-.recording h4{
-	padding: 5px;
-	text-align: center;
-}
+	.mixing h4 {
+		text-align: center;
+		padding: 5px;
+		color: rgb(72 57 42);
+	}
 
 
-.microphone {
-	width: 120px;
-	justify-content: center;
-	padding: 10px;
-	margin: auto;
-}
-
-.soundboard_active {
-	display: none;
-}
 
 
-.submitBttn {
-	margin: 50px auto;
-	
-}
+	.soundboard {
+		width: 120px;
+		justify-content: center;
+		padding: 10px;
+		margin: auto;
+	}
+
+	.mastering h4 {
+		text-align: center;
+		padding: 5px;
+		color: rgba(72, 57, 42, 1); 
+	}
+
+	.soundwave {
+		width: 120px;
+		justify-content: center;
+		padding: 10px;
+		margin: auto;
+	}
+
+	.recording h4{
+		padding: 5px;
+		text-align: center;
+	}
+
+
+	.microphone {
+		width: 120px;
+		justify-content: center;
+		padding: 10px;
+		margin: auto;
+	}
+
+	.soundboard_active {
+		display: none;
+	}
+
+
+	.submitBttn, .booksesBttn {
+		margin: 50px auto;
+	}
 
 	form {
 		display: flex;
 		flex-direction: column;
 	}
+
+
 	label {
 		margin-bottom: 20px;
 	}
@@ -425,6 +511,7 @@ footer p {
 	#name, #start_date, #end_date{
 		display: flex;
 		flex-direction: column;
+		box-sizing: border-box;
 	}
 	
 	fieldset, #payPalButton {
@@ -436,6 +523,7 @@ footer p {
 	#nameField, #startdate_field, #enddate_field{
 		width: 100%;
 		height: 30px;
+		box-sizing: border-box;
 	}
 
 	#reserve {
@@ -446,6 +534,9 @@ footer p {
 
 	#resContact {
 		display: none;
+		margin: 0px 40px;
+		box-sizing: border-box;
+
 	}
 
 
@@ -462,6 +553,19 @@ footer p {
 
 	}
 
+/*---------------About page-----------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>
+----------------------------------------------------*/
+
+.booksesBttn .shamrock a, .booksesBttn p{
+	color: #F1E4B2;
+
+}
+
+
+/*-----------------Gallery Images-------------------*/
+
+
 
 /*
 --------------------iPad------------------
@@ -476,7 +580,7 @@ footer p {
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 --------------------------------------------*/
 
-	@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
 	  header {
 	  	display: flex;
 	  	flex-direction: row;
@@ -484,16 +588,41 @@ footer p {
 	  	background-color: rgba(45, 45, 44, .95);
 	  }
 
+	#studioPan {
+		width: 100%;
+		height: 700px;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		
+	}
+
+
+
+	#panoimage {
+		position: relative;
+		margin: 0px;
+		transform: translate3d(0px, 0px, 0);
+		transition: transform .8s cubic-bezier(.45,1,.52,1.18);
+		background-repeat: repeat-x;
+	
+}
+
 
 /*--------------Nav-------------*/
 	  header {
 	  	height: 100px;
+	  	z-index: 999;
 	  }
 
 
 	  #hamburgerMenu {
 	  	display: none;
 	  }
+
+
+
 
 
 	  #navLogo {
@@ -510,11 +639,8 @@ footer p {
 			margin: 0px;
 			display: flex;
 			justify-content: flex-end;
+			padding: 20px 30px;
 		}
-
-	nav {
-
-	}
 
 	.navLabel {
 		justify-content: space-between;
@@ -545,7 +671,7 @@ footer p {
 	form {
 		display: flex;
 		flex-direction: row;
-		justify-content: flex-start;
+		justify-content: space-between;
 
 	}
 
@@ -564,26 +690,26 @@ footer p {
 	#name, #start_date {
 		display: flex;
 		flex-direction: column;
-		margin-right: 40px;
+		box-sizing: border-box;
 	}
 
 
 	#end_date {
 		display: flex;
 		flex-direction: column;
-		margin-left: 40px;
 	}
 
 
 		/*------Global Desktop font sizes---------*/
-	body {
-		font-size: 16px;
+	p {
+		font-size: 14px;
+		line-height: 30px;
 	}
 
 	h1 {
 
 		font-size: 54px;
-		line-height: 56px;
+		line-height: 64px;
 	}
 
 	h2 {
@@ -607,10 +733,18 @@ footer p {
 		font-size: 17px;
 	}
 
-	label, input {
+	label, input, legend {
 	font-size: 16px;
 
 	}
+
+	legend {
+		font-size: 16px;
+		line-height: 26px;
+
+	}
+
+
 
 /*---------------Book a session Page-----------------
 <<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -619,46 +753,46 @@ footer p {
 
 /*Select Service*/
 
-	#services {
+	#services 
+	{
 		display: flex;
-		margin: 40px 0px 80px 0px;
-		flex-direction: row;
-		justify-content: center;
-		background-color: rgba(247, 247, 237, .4)
+	    margin: 40px 40px 100px 40px;
+	    flex-direction: row;
+	    justify-content: space-between;
+	    box-sizing: border-box;
 	}
 
 
 	.mixing, .mastering, .recording{
 		display: flex;
 		flex-direction: column;
-		padding: 25px 50px;
 		cursor: pointer;
 	    -webkit-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+		box-sizing: border-box;
 	}
 
 
 	.soundboard{
-		width: 150px;
 		justify-content: center;
-		padding: 20px;
+		padding: 0px;
 	}
 
 
 	.mixing h4 {
 		text-align: center;
 		padding: 10px;
+
 	}
 
 
 
 
 	.soundwave {
-		width: 150px;
 		justify-content: center;
-		padding: 20px;
+		padding: 0px;
 	}
 
 	.mastering h4 {
@@ -667,9 +801,8 @@ footer p {
 	}
 
 	.microphone {
-		width: 150px;
 		justify-content: center;
-		padding: 20px;
+		padding: 0px;
 	}
 
 	.recording h4{
@@ -678,4 +811,213 @@ footer p {
 	}
 
 
+/*---------------About Studio------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>
+----------------------------------------------------*/
+
+	#hero {
+		display: flex;
+		order: 1;
+	}
+
+
+	
+	.twoColumn {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+
+	}
+
+
+	#heroSec {
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+	/*-----------------Gallery Images-------------------*/
+	.gallery {
+		display: flex;
+		justify-content: flex-end;
+		margin: 0px 0px 0px 70px;
+		flex-direction: column;
+
+		}
+
+	.controlRoom {
+	  width:300px;
+	  height:300px;
+	  background-image: url('../images/console_thumb.jpg');
+	  background-repeat: no-repeat;
+	  background-size: 300px auto;
+	  margin: 10px;
+	  background-color: rgba(45, 44, 45, .8);
+	  background-blend-mode: multiply;
+	  cursor: pointer;
+/*	  transition-duration: .75s;
+	  transition: cubic-bezier(.3,.06,.48,.75);*/
+
+	}
+
+
+	.liveRoom {
+	  width:300px;
+	  height:300px;
+	  background-image: url('../images/liveroom_thumb.jpg');
+	  background-repeat: no-repeat;
+	  background-size: 300px auto;
+	  margin: 10px;
+	  background-color: rgba(45, 44, 45, .8);
+	  background-blend-mode: multiply;
+	  cursor: pointer;
+
+	}
+
+
+
+
+/*	.liveRM a:hover {
+	  background-color: rgba(45, 44, 45, .8);
+	  background-blend-mode: multiply;
+	  transform:scale(1.5,1.5);
+
+	}*/
+
+
+
+	.overlayTitle{
+		font-size: 18px;
+		font-family: "usual",sans-serif;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		color: rgba(241, 228, 178, 1);
+		cursor: pointer;
+	}
+
+
+/*-------------------Modals--------------------*/
+	     #modalOne, #modalTwo{
+	     	display: none;
+
+	     }
+	
+
+
+		
+
+		
+		.modalTitle {
+	    margin: 25px auto;
+	    max-width: 1000px;
+	    width: auto;
+	    display: flex;
+	    justify-content: space-between;
+
+		}
+
+		.modal_photoTitle {
+			color: rgba(241, 228, 178, 1);
+
+		}
+
+
+
+
+		.modalHeader {
+			display: flex;
+			justify-content: flex-start;
+
+		}
+
+
+
+		.close {
+			font-size: 26px;
+			color: rgba(241, 228, 178, .8);
+			cursor: pointer;
+
+		}
+
+		.controlroomPic, .liveroomPic {
+			justify-content: center;
+			display: flex;
+			flex-direction: column;
+			width: auto;
+			max-width: 1000px;
+			margin: auto;
+			z-index: 9999;
+			display: flex;
+		}
+
+		.modalOverlay {
+			background-color: rgba(45, 44, 45, .93);
+			background-repeat: no-repeat;
+			background-position: center;
+			position: fixed;
+			margin: auto;
+			width: 100%;
+			height: 100vh;
+			overflow: auto;
+			order: 0;
+			z-index: 999;
+			padding-top: 100px;
+
+		}
+
+
+
+/*---------------Contact Us---------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>
+----------------------------------------------------*/
+	#contactForm {
+		justify-content: center;
+		align-content: center;
+	}
+
+
+
+	#fullNameField, #yourEmail, #yourPhone, #yourMessage{
+		width: 700px;
+		height: auto;
+		background-color: rgba(241, 228, 178, 1);
+	}
+
+
+	#fullnameField, #emailField, #phoneField, #messageField {
+		align-content: space-between;
+		margin: 50px 0px;
+		color: rgba(72, 57, 42);
+		border-color: rgba(72, 57, 42, 1);
+
+	}
+
+	#fullnameField label, #emailField label, #phoneField label, #messageField label {
+		color: rgba(72, 57, 42, 1);
+	}
+
+
+	::placeholder, label {
+			color: rgba(72, 57, 42, 1);
+			
+		}
+
+		input {
+			border-color: rgba(72, 57, 42, 1);
+		}
+
+		textarea {
+			border-color: rgba(72, 57, 42, 1);
+		}
+
+
+
+
+
+/*Closing tag for media query*/
 }

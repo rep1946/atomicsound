@@ -7,38 +7,15 @@ $(document).ready(() => {
 // toggle class for Hamburger
 
 
-		$('#hamburgerMenu').click(function() {
-
-			$('.mobile_dropdown').toggle(500);
-
-		});
 
 
 
-// Would like to convert to a slideToggle but cant get it to work
+	
+	// $('#hamburgerMenu').click(function() {
 
-// $( "#clickme" ).click(function() {
-//   $( "#book" ).slideToggle( "slow", function() {
-//     // Animation complete.
-//   });
-// });
+	// $('.mobile_dropdown').slideToggle(500);
 
-// 	$('#hamburgerMenu').on('click', () => {
-// 		$('.mobile_dropdown').show();
-// 	});
-
-
-// 	$('#hamburgerMenu').on('click', () => {
-
-// 		$('.mobile_dropdown').hide();
-
-
-
-// **************************PANORMA SCROLL****************************** //
-// ********************************************************************** //
-
-
-
+	// });
 
 
 
@@ -120,93 +97,54 @@ $(document).ready(() => {
 	// Toggle form on sumbit
 
 
-$('.submitBttn.shamrock').click(function() {
-  $('#resContact').show( 'fast' );
-  $('.submitBttn.shamrock').hide();
-});
-
-	  // $('#sumbitBttn').on('click', () => {
-	  // 	$('hidden').show('fast');
-
-	  // })
-
-
-	// $('#sumbitBttn').click(function(){
-	// 	$('#resContact', '.hidden').toggle(300);
+	$('.submitBttn.shamrock').click(function() {
+	  $('#resContact').show( 'fast' );
+	  $('.submitBttn.shamrock').hide();
+	});
 
 
 
+	// Show modal on click
 
 
+	$('.controlRoom').click(function() {
+		var $modalOne = $('#modalOne');
+		var $close = $('.close')
+		$modalOne.fadeIn( "320", "linear" );
 
 
+			$close.click(function(){
+			$modalOne.fadeOut(300);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		// $soundboard_active = $('<img>');
-		// $soundboard_active.attr('src', './images/atomisound_icons_soundboard_select.svg');
-		// $soundboard_active.appendTo('.mixing');
-		
+		});
+	
 	
 
 
-
-	// $('.soundboard_active').click(function(){
-	// 	$('soundboard_static').toggle(650);
+	});
 
 
-	
+	$('.liveRoom').click(function(){
+			var $modalTwo = $('#modalTwo')
+			var $close = $('.close')
+			$modalTwo.fadeIn( "320", "linear" );
 
+			$close.click(function(){
+			$modalTwo.fadeOut(300);
+		});
 
-
-		// $( '.soundboard_static').hover(
-		//   function() {
-		//     $( this ).append( $( "<svg></svg>" ) );
-		//   }, function() {
-		//     $( this ).find( "span:last" ).remove();
-		//   }
-		// );
-		 
-		// $( "li.fade" ).hover(function() {
-		//   $( this ).fadeOut( 100 );
-		//   $( this ).fadeIn( 500 );
-		// });
-
-	
-		// function swapImage(){
-		// var soundboard_static = $('.soundboard_static');
-		// $soundboard_static.hover.append()
-
-
-		// };
+	});
 		
 
 
 
-	
+
+
+
+
+
+// -----------End of document ready---------------//
+// vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv//
 
 });
 
