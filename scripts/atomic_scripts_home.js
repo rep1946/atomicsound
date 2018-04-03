@@ -244,7 +244,7 @@ function getPosition(el) {
 
 			waitForMouseStop(function() {
 			    alert("Stopped");
-				document.getElementById('overlayHome').style.backgroundColor = rgba(45, 44, 45, .8);
+				document.getElementById('overlayHome').style.backgroundColor = 'rgba(45, 44, 45, .8)';
 
 			});
 
