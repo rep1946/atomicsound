@@ -50,11 +50,16 @@ var panContainer = document.querySelector('#studioPan');
 // });
 
 		panContainer.addEventListener('mousemove', getMousePosition, false);
+		// document.getElementById('overlayHome').style.backgroundColor = rgba(45, 44, 45, .2);
+
+
 
 		function getMousePosition(e) {
 			var panContainerPosition = getPosition(panContainer);
 			var x = e.clientX - panContainerPosition.x -(imagePos.offsetWidth /2);
 			var y = e.clientY - panContainerPosition.y -(imagePos.offsetHeight /2);
+
+
 
 			// imagePos.style.backgroundPosition = x + "px";
 			// imagePos.style.backgroundPosition = y + "px";
@@ -64,6 +69,10 @@ var panContainer = document.querySelector('#studioPan');
 
 		var translate3dValue = "translate3d(" + x + "px," + y + "px, 0)";
 		imagePos.style.transform = translate3dValue;
+
+
+
+
 				  
 			// $imagePos.animate('backgroundPosition', x, y);
 
@@ -76,6 +85,19 @@ var panContainer = document.querySelector('#studioPan');
 			  
 
 		}
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
 
 
@@ -110,11 +132,13 @@ function getPosition(el) {
 	  return false
 	}
 
-// $('button.enterBttn shamrock').click((function){
-// 	$()
 
 
 // Open About us on click
+
+
+
+
 
 
 	var enterAbout = document.querySelector('.enterBttn');
@@ -197,7 +221,35 @@ function getPosition(el) {
 
 
 		// };
-		
+				function waitForMouseStop(callback) {
+			    var timer;
+
+			    function stoppedMoving(evt) {
+			        document.onmousemove = null;
+			        callback();
+			    }
+
+			    function moveHandler(evt) {
+			        evt = evt || window.event;
+			        if (timer) {
+			            window.clearTimeout(timer);
+			        }
+			        timer = window.setTimeout(function() {
+			            stoppedMoving(evt);
+			        }, 450);
+			    }
+
+			    document.onmousemove = moveHandler;
+			}
+
+			waitForMouseStop(function() {
+			    alert("Stopped");
+				document.getElementById('overlayHome').style.backgroundColor = rgba(45, 44, 45, .8);
+
+			});
+
+
+
 
 
 

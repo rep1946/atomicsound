@@ -326,18 +326,25 @@ main {
 	width: 100%;
 	}
 
-#studioPan {
+
+#overlayHome{
 	background-color: rgba(45, 44, 45, .8);
+	z-index: 9;
+	position: absolute;
+	height: 700px;
+}
+
+#studioPan {
 	/*background-image: url("../images/Controlroom_hero.jpg");*/
 	/*background-repeat: none;
 */	/*background-size: cover;*/
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
-	/*background-position: center;
-*/	
-}
+	transform: translate3d(0px, 0px, 0);
+	transition: transform .8s cubic-bezier(.45,1,.52,1.18);
 
+}
 
 
 #mainCTA {
@@ -588,6 +595,17 @@ footer p {
 	  	background-color: rgba(45, 45, 44, .95);
 	  }
 
+
+	#overlayHome {
+		    background-color: rgba(45, 44, 45, .8);
+		    z-index: 9;
+		    position: absolute;
+		    width: 100%;
+		    height: 700px;
+		    transition: opacity;
+	}
+
+
 	#studioPan {
 		width: 100%;
 		height: 700px;
@@ -606,9 +624,17 @@ footer p {
 		transform: translate3d(0px, 0px, 0);
 		transition: transform .8s cubic-bezier(.45,1,.52,1.18);
 		background-repeat: repeat-x;
+		
 	
 }
 
+
+#studioPan::before {
+	position: absolute;
+	background-color: rgba(45, 45, 44, .9);
+
+
+}
 
 /*--------------Nav-------------*/
 	  header {
@@ -859,7 +885,6 @@ footer p {
 	  transition: cubic-bezier(.3,.06,.48,.75);*/
 
 	}
-
 
 	.liveRoom {
 	  width:300px;
