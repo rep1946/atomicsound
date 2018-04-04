@@ -49,8 +49,11 @@ var panContainer = document.querySelector('#studioPan');
 // 		$('#pano_image').css('backgroundPosition', function(e));
 // });
 
-		panContainer.addEventListener('mousemove', getMousePosition, false);
-		// document.getElementById('overlayHome').style.backgroundColor = rgba(45, 44, 45, .2);
+		panContainer.addEventListener('click', getMousePosition, false);
+
+		
+
+		
 
 
 
@@ -140,7 +143,6 @@ function getPosition(el) {
 
 
 
-
 	var enterAbout = document.querySelector('.enterBttn');
 	enterAbout.addEventListener('click', newWindow);
 			function newWindow() {
@@ -154,99 +156,32 @@ function getPosition(el) {
 
 
 
+			// 	function waitForMouseStop(callback) {
+			//     var timer;
 
+			//     function stoppedMoving(evt) {
+			//         document.onmousemove = null;
+			//         callback();
+			//     }
 
+			//     function moveHandler(evt) {
+			//         evt = evt || window.event;
+			//         if (timer) {
+			//             window.clearTimeout(timer);
+			//         }
+			//         timer = window.setTimeout(function() {
+			//             stoppedMoving(evt);
+			//         }, 450);
+			//     }
 
+			//     document.onmousemove = moveHandler;
+			// }
 
+			// waitForMouseStop(function() {
+			//     // alert("Stopped");
+			// 	document.getElementById('overlayHome').style.backgroundColor = 'rgba(45, 44, 45, .8)';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		// $soundboard_active = $('<img>');
-		// $soundboard_active.attr('src', './images/atomisound_icons_soundboard_select.svg');
-		// $soundboard_active.appendTo('.mixing');
-		
-	
-
-
-
-	// $('.soundboard_active').click(function(){
-	// 	$('soundboard_static').toggle(650);
-
-
-	
-
-
-
-		// $( '.soundboard_static').hover(
-		//   function() {
-		//     $( this ).append( $( "<svg></svg>" ) );
-		//   }, function() {
-		//     $( this ).find( "span:last" ).remove();
-		//   }
-		// );
-		 
-		// $( "li.fade" ).hover(function() {
-		//   $( this ).fadeOut( 100 );
-		//   $( this ).fadeIn( 500 );
-		// });
-
-	
-		// function swapImage(){
-		// var soundboard_static = $('.soundboard_static');
-		// $soundboard_static.hover.append()
-
-
-		// };
-				function waitForMouseStop(callback) {
-			    var timer;
-
-			    function stoppedMoving(evt) {
-			        document.onmousemove = null;
-			        callback();
-			    }
-
-			    function moveHandler(evt) {
-			        evt = evt || window.event;
-			        if (timer) {
-			            window.clearTimeout(timer);
-			        }
-			        timer = window.setTimeout(function() {
-			            stoppedMoving(evt);
-			        }, 450);
-			    }
-
-			    document.onmousemove = moveHandler;
-			}
-
-			waitForMouseStop(function() {
-			    alert("Stopped");
-				document.getElementById('overlayHome').style.backgroundColor = 'rgba(45, 44, 45, .8)';
-
-			});
+			// });
 
 
 

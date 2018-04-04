@@ -26,6 +26,14 @@ $(document).ready(() => {
 
 // MIXING ICON
 
+
+	$('#mixing').hover(function(){
+		$( '.servicesContainer' ).attr('src', './images/soundboard_select.svg');
+
+	});
+
+
+
 	// Swap out Mixing SVG on hover 
 
 	$('.mixing').hover(function(){

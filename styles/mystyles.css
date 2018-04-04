@@ -171,6 +171,10 @@ button a {
 /*------------------Global Page elements----------------
 ********************************************************
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+nav {
+	display: flex;
+}
+
 
 .container {
 	margin: 50px;
@@ -287,6 +291,13 @@ ul li.navLabel a {
 	text-decoration: none;
 	
 }
+
+ul li.navLabel a:hover {
+	color: #66A182;
+}
+
+
+
 
 #menuItems {
 	display: flex;
@@ -437,6 +448,58 @@ footer p {
 
 /*Select Service*/
 
+span input[type="checkbox"] {
+    opacity:  0%;
+}
+
+/*test for checkbox*/
+
+#mixing {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  display: flex;
+  
+}
+
+
+
+
+
+.servicesContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: url("../images/soundboard_static.svg");
+  background-repeat: no-repeat;
+/*  background-color: green;*/
+}
+
+/* Hide the browser's default checkbox */
+.servicesContainer input {
+  position: absolute;
+  display: hidden;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 	#services {
 		display: flex;
 		flex-direction: column;
@@ -454,7 +517,6 @@ footer p {
 		-ms-user-select: none;
 		user-select: none;
 	}
-
 
 
 
@@ -553,15 +615,13 @@ footer p {
 
 
 	#payPalButton {
-	border-radius: 20px;
-	padding: 10px 50px;
-	border: none;
-	color: white;
-	background-color: #0070ba;
-	margin: 50px auto;
-	font-size: 16px;
-	font-weight: 700;
-	letter-spacing: 1px;
+	border-radius: 25px;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    margin: 50px auto;
+    font-weight: 700;
 
 	}
 
@@ -602,7 +662,7 @@ footer p {
 
 
 	#overlayHome {
-		    background-color: rgba(45, 44, 45, .8);
+		    background-color: rgba(45, 44, 45, .7);
 		    z-index: 9;
 		    position: absolute;
 		    width: 100%;
